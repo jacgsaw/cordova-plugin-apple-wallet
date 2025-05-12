@@ -6,7 +6,7 @@ const path = require("path")
 module.exports = function (context) {
   const rootdir = context.opts.projectRoot
 
-  const pluginDir = path.join(rootdir, "plugins", "@pkg", "cordova-plugin-apple-wallet")
+  const pluginDir = path.join(rootdir, "plugins", "cordova-plugin-apple-wallet")
   const appConfigFile = path.join(rootdir, "build.json")
 
   var appConfig = {}

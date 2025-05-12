@@ -16,7 +16,7 @@ module.exports = function (context) {
   try {
     const iosPath = path.join(projectRoot, "platforms", "ios")
 
-    const plistLibPath = path.join(projectRoot, "plugins", "@pkg", "cordova-plugin-apple-wallet", "src", "ios", "libs", "js", "plist")
+    const plistLibPath = path.join(projectRoot, "plugins", "cordova-plugin-apple-wallet", "src", "ios", "libs", "js", "plist")
     const plist = require(plistLibPath)
     const config = utils.getConfigParser(context, path.join(projectRoot, "config.xml"))
     const projectName = config.name()

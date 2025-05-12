@@ -9,7 +9,7 @@ module.exports = function (context) {
   // this is just to not block execution if it`s present a error
   try {
     const projectRoot = context.opts.projectRoot
-    const plistLibPath = path.join(projectRoot, "plugins", "@pkg" ,"cordova-plugin-apple-wallet", "src", "ios", "libs", "js", "plist")
+    const plistLibPath = path.join(projectRoot, "plugins" ,"cordova-plugin-apple-wallet", "src", "ios", "libs", "js", "plist")
     const plist = require(plistLibPath)
     const appConfigFile = path.join(projectRoot, "build.json")
     const iosPath = path.join(projectRoot, "platforms", "ios")
@@ -149,7 +149,6 @@ module.exports = function (context) {
       const codeMethodPath = path.join(
         projectRoot,
         "plugins",
-        "@pkg",
         "cordova-plugin-apple-wallet",
         "src",
         "ios",
