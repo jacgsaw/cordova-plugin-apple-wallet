@@ -1,3 +1,4 @@
+/** - Enable if compiled with Wallet extension
 import Foundation
 import CoreData
 import HP2AppleSDK
@@ -101,3 +102,4 @@ extension ActionDelegateHandler: ActionRequestHandlerDelegate {
         )
     }
 }
+ */

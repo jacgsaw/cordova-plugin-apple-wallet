@@ -1,8 +1,8 @@
 {
     "name": "cordova-plugin-apple-wallet",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "description": "ApplePay plugin for cordova",
-    "author": "Technisys <jose.cruz@davivienda.com>",
+    "author": "Davivienda <jose.cruz@davivienda.com>",
     "homepage": "http://www.davivienda.com",
     "license": "MIT",
     "engines": {

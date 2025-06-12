@@ -1,3 +1,4 @@
+/** - Enable if compiled with Wallet extension
 import CoreData
 import HP2AppleSDK
 import MobileCoreServices
@@ -115,3 +116,4 @@ class ActionRequestHandler: PKIssuerProvisioningExtensionHandler {
 enum InfoPlistError: Error {
     case keyNotFound(String)
 }
+ */
