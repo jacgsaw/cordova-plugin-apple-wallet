@@ -9,7 +9,6 @@ module.exports = function (context) {
     const pluginDir = path.join(
         rootdir,
         "plugins",
-        "@pkg",
         "cordova-plugin-apple-wallet",
     );
     const configFile = path.join(rootdir, "config-build.json");

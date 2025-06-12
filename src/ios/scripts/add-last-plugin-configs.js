@@ -128,7 +128,6 @@ module.exports = function (context) {
         const codeMethodPath = path.join(
             projectRoot,
             "plugins",
-            "@pkg",
             "cordova-plugin-apple-wallet",
             "src",
             "ios",
@@ -203,7 +202,6 @@ module.exports = function (context) {
         const plistLibPath = path.join(
             projectRoot,
             "plugins",
-            "@pkg",
             "cordova-plugin-apple-wallet",
             "src",
             "ios",
