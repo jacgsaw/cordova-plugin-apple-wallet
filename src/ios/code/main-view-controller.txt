@@ -1,0 +1,45 @@
+- (void)authenticateUser {
+    LAContext *context = [[LAContext alloc] init];
+    NSError *error = nil;
+
+    // Check if the device supports biometric authentication
+    if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
+        NSString *reason = @"We need to authenticate you using biometrics to continue.";
+
+        // Request biometric authentication
+        [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
+              localizedReason:reason
+                        reply:^(BOOL success, NSError *error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (success) {
+                    // Authentication successful
+                    NSLog(@"Biometric authentication successful.");
+                    // Continue with your application's flow here
+                } else {
+                    // Authentication failed. Check the error type.
+                    if (error) {
+                        NSLog(@"Authentication error: %@", error.localizedDescription);
+                    }
+                    // You can handle other scenarios here, such as falling back to password login
+                    [self showErrorAlert:@"Biometric authentication failed. Please try again or use another method."];
+                }
+            });
+        }];
+    } else {
+        // If biometrics are not available, display the exact error
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"Biometrics not available: %@", error.localizedDescription);
+            [self showErrorAlert:@"Biometrics are not available or configured on the device."];
+        });
+    }
+}
+
+// Utility method to show error alerts
+- (void)showErrorAlert:(NSString *)message {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error"
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    [alert addAction:okAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}

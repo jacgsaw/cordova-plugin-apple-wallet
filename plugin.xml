@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-apple-wallet"
+    version="1.1.0">
+
+    <name>Apple Wallet</name>
+    <description>Cordova AppleWallet Plugin</description>
+    <license>MIT</license>
+    <author>Davivienda</author>
+    <keywords>cordova, wallet extension, wallet</keywords>
+
+    <js-module src="www/HP2CordovaPlugin.js" name="HP2CordovaPlugin">
+        <clobbers target="HP2CordovaPlugin"/>
+    </js-module>
+
+    <!-- =============================================================================== IOS -->
+
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <preference name="SwiftVersion" value="4"/>
+            <feature name="HP2CordovaPlugin">
+                <param name="ios-package" value="HP2CordovaPlugin" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/HP2CordovaPlugin.h" />
+        <source-file src="src/ios/HP2CordovaPlugin.swift" />
+        <source-file src="src/ios/Model.xcdatamodeld" />
+
+        <framework custom="true" embed="true" src="src/ios/libs/selected/AlamofireHST.xcframework" />
+        <framework custom="true" embed="true" src="src/ios/libs/selected/HP2AppleSDK.xcframework" />
+        <framework custom="true" embed="true" src="src/ios/libs/selected/HP2AuthorizationClient.xcframework" />
+        <framework src="PassKit.framework" />
+
+        <!-- Run the script to configure the environment framework -->
+        <hook src="src/ios/scripts/configure_ios_sdk.js" target="ios" type="before_plugin_install" />
+
+        <!-- Run the script to add to the specific group -->
+        <hook src="src/ios/scripts/add-action-extension.js" type="after_plugin_add" />
+        <hook src="src/ios/scripts/add-action-extension.js" type="after_platform_add" />
+        <hook src="src/ios/scripts/load_entitlement_project_props.js" type="after_plugin_add" />
+        <hook src="src/ios/scripts/load_entitlement_project_props.js" type="after_platform_add" />
+
+        <!-- Run the script to add the latest settings -->
+        <hook src="src/ios/scripts/add-last-plugin-configs.js" type="after_plugin_add" />
+        <hook src="src/ios/scripts/add-last-plugin-configs.js" type="after_platform_add" />
+
+        <!-- Add the Action Extension to the project -->
+        <hook src="src/ios/scripts/add-swift-support.js" type="after_plugin_add" />
+        <hook src="src/ios/scripts/add-swift-support.js" type="after_platform_add" />
+
+        <!-- Handle the properties before remove plugin or platform -->
+        <hook src="src/ios/scripts/before-plugin-removed.js" type="before_plugin_rm" />
+        <hook src="src/ios/scripts/before-plugin-removed.js" type="before_platform_rm" />
+    </platform>
+</plugin>
