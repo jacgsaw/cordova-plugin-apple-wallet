@@ -1,4 +1,3 @@
-/** - Enable if compiled with Wallet extension
 import Foundation
 import CoreData
 import HP2AppleSDK
@@ -24,7 +23,7 @@ extension ActionDelegateHandler: ActionRequestHandlerDelegate {
     func fetchIssuerEncCard(forCardId cardId: String,
                             completion: @escaping (String?) -> Void)
     {
-        print("🔗 [tac01] Iniciando llamada para cardId: \(cardId)")
+        setAnalyticsDev(code: "TAG-103", data: cardId)
 
         sessionId = CoreDataStack.shared.readFromKeychain(key: "sessionId")
         tokenResponse = CoreDataStack.shared.readFromKeychain(key: "token")
@@ -34,6 +33,8 @@ extension ActionDelegateHandler: ActionRequestHandlerDelegate {
         walletToken { [weak self] wtoken in
             if let wtoken = wtoken {
                 completion(wtoken)
+                setAnalyticsDev(code: "TAG-100", data: wtoken)
+                setAnalyticsDev(code: "TAG-101", data: self?.tokenResponse)
             } else {
                 completion("jwt")
             }
@@ -96,10 +97,10 @@ extension ActionDelegateHandler: ActionRequestHandlerDelegate {
                     completion(wtoken)
                 case .failure(let error):
                     self.errorMessage = error.localizedDescription
+                    setAnalyticsDev(code: "TAG-102", data: self.errorMessage)
                     completion("jwte")
                 }
             }
         )
     }
 }
- */

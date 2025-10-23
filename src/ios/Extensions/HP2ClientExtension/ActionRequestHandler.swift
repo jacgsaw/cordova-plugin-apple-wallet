@@ -1,4 +1,3 @@
-/** - Enable if compiled with Wallet extension
 import CoreData
 import HP2AppleSDK
 import MobileCoreServices
@@ -30,7 +29,8 @@ class ActionRequestHandler: PKIssuerProvisioningExtensionHandler {
             self.institutionCode = try readInfoPlistValue(forKey: "institutionCode")
         } catch {
             print("[Tag01] The key [\(error.localizedDescription)] wasn't found in Info.plist.")
-            self.groupID         = "group.com.davivienda.wallet.InAppProvisioningExtension"
+            setAnalyticsDev(code: "TAG-01 🚀", data: "The key [\(error.localizedDescription)] wasn't found in Info.plist.")
+            self.groupID         = "group.cr.davivienda.wallet.InAppProvisioningExtension"
             self.institutionCode = "DVCR-430"
         }
         self.hp2SDK = HP2(institutionCode: self.institutionCode,
@@ -116,4 +116,3 @@ class ActionRequestHandler: PKIssuerProvisioningExtensionHandler {
 enum InfoPlistError: Error {
     case keyNotFound(String)
 }
- */

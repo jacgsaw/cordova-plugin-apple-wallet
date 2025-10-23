@@ -5,13 +5,12 @@ import UIKit
 class ActionViewController: UIViewController, PKIssuerProvisioningExtensionAuthorizationProviding {
     var completionHandler: ((PKIssuerProvisioningExtensionAuthorizationResult) -> Void)?
     var activityIndicator: UIActivityIndicatorView!
-    // var hostingController: UIHostingController<LoginActivity>?
+    var hostingController: UIHostingController<LoginActivity>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupLoadingIndicator()
-        // showSwiftUIView()
+        showSwiftUIView()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -22,7 +21,6 @@ class ActionViewController: UIViewController, PKIssuerProvisioningExtensionAutho
         ***********************************/
     }
 
-    /** - Enable if compiled with Wallet extension
     func showSwiftUIView() {
         let loginView = LoginActivity() { token in
             print("jwt -> \(token)")
@@ -44,10 +42,9 @@ class ActionViewController: UIViewController, PKIssuerProvisioningExtensionAutho
                 view.addSubview(controller.view)
                 controller.didMove(toParent: self)
         }
-     */
 
     func setupLoadingIndicator() {
-            print("auth1 setupLoadingIndicator")
+            setAnalyticsDev(code: "TAG-200", data: "setupLoadingIndicator")
             view.backgroundColor = .systemBackground
 
             activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .large)
@@ -65,11 +62,10 @@ class ActionViewController: UIViewController, PKIssuerProvisioningExtensionAutho
 
     func authenticate() {
         BiometricUtility.shared.checkBiometricAuthorization { isAuthorized, _ in
-        print("auth2 authenticate: \(isAuthorized)")
+            setAnalyticsDev(code: "TAG-201", data: "auth2 authenticate: \(isAuthorized)")
             DispatchQueue.main.async {
                 self.activityIndicator.stopAnimating()
             }
-
             if isAuthorized {
                 self.completionHandler?(.authorized)
             } else {
