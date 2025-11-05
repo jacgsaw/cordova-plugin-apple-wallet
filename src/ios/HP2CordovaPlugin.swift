@@ -50,7 +50,6 @@ func `init`(command: CDVInvokedUrlCommand) {
 
 @objc(updateDataBase:)
 func updateDataBase(command: CDVInvokedUrlCommand) {
-    // Comprobamos que ya estemos inicializados
     guard
         let inst = institutionCode,
         let grp  = groupID
@@ -66,19 +65,15 @@ func updateDataBase(command: CDVInvokedUrlCommand) {
         return commandDelegate.send(pr, callbackId: command.callbackId)
     }
 
-    // Obtenemos y parseamos el JSON de tarjetas
     let cardDataList = command.arguments[1] as? String ?? ""
     let cards = toCardDataModel(jsonString: cardDataList)
 
-    // Aseguramos la instancia de HP2
     mHP2 = mHP2 ?? HP2(institutionCode: inst, groupID: grp)
 
-    // Logs para consola
     print("💾 [HP2CordovaPlugin] Calling updateDataBase with \(cards.count) items")
     mHP2?.updateDataBase(cardDataList: cards)
     print("✅ [HP2CordovaPlugin] updateDataBase completed — saved \(cards.count) records")
 
-    // Preparamos la respuesta con los IDs guardados
     let savedInfo = cards.map {
         ["cardId": $0.cardID, "lastFour": $0.lastFourDigits]
     }

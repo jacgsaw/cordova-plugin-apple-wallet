@@ -44,8 +44,8 @@ module.exports = function (context) {
         };
     }
 
-    const isRelease = context.cmdLine && context.cmdLine.indexOf("--release") !== -1;
-    const buildType = isRelease ? "release" : "debug";
+    // const isRelease = context.cmdLine && context.cmdLine.indexOf("--release") !== -1;
+    const buildType = "release";
 
     const iosCfg = cfg.ios || {};
     const section = iosCfg[buildType] || {};
