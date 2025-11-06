@@ -30,7 +30,7 @@ class ActionRequestHandler: PKIssuerProvisioningExtensionHandler {
         } catch {
             print("[Tag01] The key [\(error.localizedDescription)] wasn't found in Info.plist.")
             setAnalyticsDev(code: "TAG-01 🚀", data: "The key [\(error.localizedDescription)] wasn't found in Info.plist.")
-            self.groupID         = "group.cr.davivienda.ubicaciones"
+            self.groupID         = "group.cr.davivienda.wallet.InAppProvisioningExtension"
             self.institutionCode = "DVCR-430"
         }
         self.hp2SDK = HP2(institutionCode: self.institutionCode,
