@@ -15,14 +15,18 @@ class HP2CordovaPlugin : CDVPlugin {
 func `init`(command: CDVInvokedUrlCommand) {
     let inst = command.arguments[0] as? String ?? ""
     let grp  = command.arguments[1] as? String ?? ""
+    let msj = "init"
+    let isError = false
+
+    print("🟡 [HP2:init] args -> institutionCode='\(inst)', groupID='\(grp)'")
 
     var status: CDVCommandStatus = .error
     var result = toJson(
         method: "init",
         data: [:],
-        detail: "",
-        error: true,
-        message: "Invalid parameter."
+        detail: "Cargando...",
+        error: isError,
+        message: msj
     )
 
     if !inst.isEmpty && !grp.isEmpty {

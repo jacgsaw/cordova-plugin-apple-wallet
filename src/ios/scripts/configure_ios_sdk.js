@@ -58,10 +58,17 @@ module.exports = function (context) {
     const srcDir = path.join(pluginDir, "src", "ios", "libs", "available", hstEnv);
     const destDir = path.join(pluginDir, "src", "ios", "libs", "selected");
 
+    console.log(
+        `[apple-wallet-jacgsaw] ➜ iOS srcDir="${srcDir}", hst-destDir="${destDir}"`
+    );
+
     function copyRecursive(src, dest) {
         if (!fs.existsSync(src)) {
             throw new Error(`[apple-wallet-jacgsaw] La carpeta ${src} no existe`);
         }
+        console.log(
+            `[apple-wallet-jacgsaw] ➜ Se copian archivos de "${src}" a "${dest}"`
+        );
         fs.mkdirSync(dest, { recursive: true });
         fs.readdirSync(src).forEach((child) => {
             const s = path.join(src, child);
