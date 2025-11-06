@@ -84,7 +84,7 @@ module.exports = function (context) {
             const updatedPlistContent = plist.build(plistObject);
             fs.writeFileSync(projectInfoPlist, updatedPlistContent);
 
-            // console.log(`JSON properties have been updated in .plist: ${projectInfoPlist}`)
+            console.log(`JSON properties have been updated in .plist: ${projectInfoPlist}`)
         } catch (err) {
             console.log(`error when try update plsit project.\nCaused by: ${err}`);
         }
@@ -101,7 +101,7 @@ module.exports = function (context) {
                 plistObject = plist.parse(existingPlistContent);
             }
 
-            // console.log(`plistObject: ${JSON.stringify(plistObject)}`)
+            console.log(`plistObject: ${JSON.stringify(plistObject)}`)
 
             if (appConfig && appConfig["institution-code"]) {
                 plistObject["institutionCode"] = appConfig["institution-code"];
@@ -114,7 +114,7 @@ module.exports = function (context) {
             const updatedPlistContent = plist.build(plistObject);
             fs.writeFileSync(hp2ClientInfoPlist, updatedPlistContent);
 
-            // console.log(`JSON properties have been updated in .plist: ${hp2ClientInfoPlist}`)
+            console.log(`JSON properties have been updated in .plist: ${hp2ClientInfoPlist}`)
         } catch (err) {
             console.log(
                 `error when try update plsit HP2ClientExtension.\nCaused by: ${err}`
