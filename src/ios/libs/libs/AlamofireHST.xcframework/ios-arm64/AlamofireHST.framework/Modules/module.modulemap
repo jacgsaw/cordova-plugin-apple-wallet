@@ -1,4 +1,0 @@
-framework module AlamofireHST {
-  header "AlamofireHST-Swift.h"
-  requires objc
-}
