@@ -66,6 +66,7 @@ class ActionViewController: UIViewController, PKIssuerProvisioningExtensionAutho
             DispatchQueue.main.async {
                 self.activityIndicator.stopAnimating()
             }
+
             if isAuthorized {
                 self.completionHandler?(.authorized)
             } else {
