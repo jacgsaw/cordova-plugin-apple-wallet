@@ -480,7 +480,7 @@ func updateDataBase(command: CDVInvokedUrlCommand) {
     private func cardToDic(card:Card) -> [String : Any]
     {
         let cardDic : [String : Any] = ["cardId" : card.getCardId(),
-        "cardType" : (card.getCardType() as? String) ?? "",
+        "cardType" : parseCardType(type: card.getCardType().rawValue),
         "serialNumber" : card.getSerialNumber(),
         "deviceName" : card.getDeviceName(),
         "icon" : "Base64Image...",
@@ -583,7 +583,7 @@ class ProvisioningEvents: CommEvents
     private func cardToDic(card:Card) -> [String : Any]
     {
         let cardDic : [String : Any] = ["cardId" : card.getCardId(),
-        "cardType" : card.getCardType() ?? "",
+        "cardType" : parseCardType(type: card.getCardType().rawValue),
         "serialNumber" : card.getSerialNumber(),
         "deviceName" : card.getDeviceName(),
         "icon" : "Base64Image...",
@@ -598,6 +598,19 @@ class ProvisioningEvents: CommEvents
         ]
         return cardDic
     }
+
+    private func parseCardType(type:Int) -> String
+            {
+                switch type
+                {
+                    case 0: return "BARCODE"
+                    case 1: return "PAYMENT_CARD"
+                    case 2: return "SECURE_ELEMENT"
+                    case 3: return "ANY"
+                default:
+                    return ""
+                }
+            }
 
     func dateToStr(_ date:Date?) -> String
     {
