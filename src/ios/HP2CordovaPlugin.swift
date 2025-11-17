@@ -508,6 +508,19 @@ func updateDataBase(command: CDVInvokedUrlCommand) {
         return ""
     }
 
+    private func parseCardType(type:Int) -> String
+                {
+                    switch type
+                    {
+                        case 0: return "BARCODE"
+                        case 1: return "PAYMENT_CARD"
+                        case 2: return "SECURE_ELEMENT"
+                        case 3: return "ANY"
+                    default:
+                        return ""
+                    }
+                }
+
     private func parseCardState(state:Int) -> String
     {
         switch state
