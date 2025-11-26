@@ -307,6 +307,35 @@ module.exports = function (context) {
     project.addToPbxSourcesBuildPhase(modelToAuthExtension)
   }
 
+  logger.addLogInfoSection(`Add ModelWt share into targets`)
+
+// get the project's ModelWt.xcdatamodeld
+  const modelWtFile = findAtPBXFileReference("ModelWt.xcdatamodeld")
+
+  if (modelWtFile) {
+    const fpathWt = path.join(iosPath, "ModelWt.xcdatamodeld")
+    const opt = {}
+
+    // Add ModelWt to HP2ClientExtension
+    let modelWtToHp2 = new pbxFile(fpathWt, opt)
+    modelWtToHp2.fileRef = modelWtFile.uuid
+    modelWtToHp2.uuid = project.generateUuid()
+    modelWtToHp2.target = hp2ExtensionTarget.uuid
+
+    project.addToPbxBuildFileSection(modelWtToHp2)
+    project.addToPbxSourcesBuildPhase(modelWtToHp2)
+
+    // Add ModelWt to AuthenticationExtension
+    let modelWtToAuth = new pbxFile(fpathWt, opt)
+    modelWtToAuth.fileRef = modelWtFile.uuid
+    modelWtToAuth.uuid = project.generateUuid()
+    modelWtToAuth.target = authExtensionTarget.uuid
+
+    project.addToPbxBuildFileSection(modelWtToAuth)
+    project.addToPbxSourcesBuildPhase(modelWtToAuth)
+  }
+
+
   logger.addLogInfoSection(`set entitlements files`)
 
   // Check for Entitlements references

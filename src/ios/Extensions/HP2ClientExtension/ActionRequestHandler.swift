@@ -33,8 +33,7 @@ class ActionRequestHandler: PKIssuerProvisioningExtensionHandler {
             self.groupID         = "group.cr.davivienda.wallet.InAppProvisioningExtension"
             self.institutionCode = "DVCR-430"
         }
-        self.hp2SDK = HP2(institutionCode: self.institutionCode,
-                          groupID: self.groupID)
+        self.hp2SDK = HP2(institutionCode: self.institutionCode, groupID: self.groupID)
     }
 
     func printCardFromCoreDataById(cardID: String) {
@@ -75,6 +74,7 @@ class ActionRequestHandler: PKIssuerProvisioningExtensionHandler {
         }
 
         printCardFromCoreDataById(cardID: identifier)
+        print("[Tag] printCardFromCoreDataById select:", encCard ?? "nil")
 
         let nonceB64     = nonce.base64EncodedString()
         let signatureB64 = nonceSignature.base64EncodedString()

@@ -451,6 +451,8 @@ func updateDataBase(command: CDVInvokedUrlCommand) {
                          let paymentNetwork = jsonObject["paymentNetwork"] as? String,
                          let cardType = jsonObject["cardType"] as? String {
 
+                         let encCard = jsonObject["encCard"] as? String ?? ""
+
                         Hp2AppleLog.i("HP2AppleSDKTest", "cardHolderName: \(cardHolderName)")
                         Hp2AppleLog.i("HP2AppleSDKTest", "cardId: \(cardId)")
                         Hp2AppleLog.i("HP2AppleSDKTest", "cardImageBase64: \(cardImageBase64)")
@@ -458,6 +460,7 @@ func updateDataBase(command: CDVInvokedUrlCommand) {
                         Hp2AppleLog.i("HP2AppleSDKTest", "localizedDescription: \(localizedDescription)")
                         Hp2AppleLog.i("HP2AppleSDKTest", "paymentNetwork: \(paymentNetwork)")
                         Hp2AppleLog.i("HP2AppleSDKTest", "cardType: \(cardType)")
+                        Hp2AppleLog.i("HP2AppleSDKTest", "encCard: \(encCard)")
                         let cardToAdd = CardDataModel(cardHolderName: cardHolderName,
                                                       cardID: cardId,
                                                       cardImageBase64: cardImageBase64,
