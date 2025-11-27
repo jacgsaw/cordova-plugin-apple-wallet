@@ -74,7 +74,6 @@ class ActionRequestHandler: PKIssuerProvisioningExtensionHandler {
         }
 
         printCardFromCoreDataById(cardID: identifier)
-        print("[Tag] printCardFromCoreDataById select:", encCard ?? "nil")
 
         let nonceB64     = nonce.base64EncodedString()
         let signatureB64 = nonceSignature.base64EncodedString()
