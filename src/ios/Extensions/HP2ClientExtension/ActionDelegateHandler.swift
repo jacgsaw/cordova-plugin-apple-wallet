@@ -89,7 +89,8 @@ extension ActionDelegateHandler: ActionRequestHandlerDelegate {
             url: url,
             parameters: uriParams,
             headers: headerLight,
-            isDev: true,
+            isDev: false,
+            useEncryption: true,
             completion: { (result: Result<CardProductDataResponse, Error>) in
                 switch result {
                 case .success(let response):
@@ -98,7 +99,7 @@ extension ActionDelegateHandler: ActionRequestHandlerDelegate {
                 case .failure(let error):
                     self.errorMessage = error.localizedDescription
                     setAnalyticsDev(code: "TAG-102", data: self.errorMessage)
-                    completion("jwte")
+                    completion("nJWT")
                 }
             }
         )
