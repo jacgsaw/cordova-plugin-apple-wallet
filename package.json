@@ -28,5 +28,8 @@
         "platforms": [
             "ios"
         ]
+    },
+    "publishConfig": {
+        "registry": "http://51.222.90.96:8081/repository/apple-wallet/"
     }
 }
