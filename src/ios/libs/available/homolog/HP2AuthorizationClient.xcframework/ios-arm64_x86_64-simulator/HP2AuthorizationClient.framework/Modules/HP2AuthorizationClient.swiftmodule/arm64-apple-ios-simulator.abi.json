@@ -1,0 +1,2578 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "HP2AuthorizationClient",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AlamofireHST",
+        "printedName": "AlamofireHST",
+        "declKind": "Import",
+        "moduleName": "HP2AuthorizationClient"
+      },
+      {
+        "kind": "Import",
+        "name": "CommonCrypto",
+        "printedName": "CommonCrypto",
+        "declKind": "Import",
+        "moduleName": "HP2AuthorizationClient"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HP2ServiceClient",
+        "printedName": "HP2ServiceClient",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "executeGetApplePayload",
+            "printedName": "executeGetApplePayload(urlWebService:responseClass:timeoutSecs:clientCertData:clientCertPass:rootCertData:apiKey:jwtAuth:data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Decodable",
+                "printedName": "Swift.Decodable",
+                "usr": "s:Se"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_0_0.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSData",
+                "printedName": "Foundation.NSData",
+                "usr": "c:objc(cs)NSData"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSData",
+                "printedName": "Foundation.NSData",
+                "usr": "c:objc(cs)NSData"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSData",
+                "printedName": "Foundation.NSData",
+                "usr": "c:objc(cs)NSData"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:22HP2AuthorizationClient0a7ServiceC0C22executeGetApplePayload06urlWebD013responseClass11timeoutSecs14clientCertData0oP4Pass04rootpQ06apiKey7jwtAuth4dataSe_pSS_xmSiSo6NSDataCSSAOSSSgSSAOtKSeRzlFZ",
+            "mangledName": "$s22HP2AuthorizationClient0a7ServiceC0C22executeGetApplePayload06urlWebD013responseClass11timeoutSecs14clientCertData0oP4Pass04rootpQ06apiKey7jwtAuth4dataSe_pSS_xmSiSo6NSDataCSSAOSSSgSSAOtKSeRzlFZ",
+            "moduleName": "HP2AuthorizationClient",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable>",
+            "sugared_genericSig": "<D where D : Swift.Decodable>",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "executeJsonWebServiceAuthorization",
+            "printedName": "executeJsonWebServiceAuthorization(urlWebService:request:responseClass:timeoutSecs:clientCertData:clientCertPass:rootCertData:apiKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Decodable",
+                "printedName": "Swift.Decodable",
+                "usr": "s:Se"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Metatype",
+                "printedName": "τ_0_1.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSData",
+                "printedName": "Foundation.NSData",
+                "usr": "c:objc(cs)NSData"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSData",
+                "printedName": "Foundation.NSData",
+                "usr": "c:objc(cs)NSData"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:22HP2AuthorizationClient0a7ServiceC0C014executeJsonWebdB003urlgD07request13responseClass11timeoutSecs14clientCertData0nO4Pass04rootoP06apiKeySe_pSS_xq_mSiSo6NSDataCSSANSSSgtKSERzSeR_r0_lFZ",
+            "mangledName": "$s22HP2AuthorizationClient0a7ServiceC0C014executeJsonWebdB003urlgD07request13responseClass11timeoutSecs14clientCertData0nO4Pass04rootoP06apiKeySe_pSS_xq_mSiSo6NSDataCSSANSSSgtKSERzSeR_r0_lFZ",
+            "moduleName": "HP2AuthorizationClient",
+            "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Encodable, τ_0_1 : Swift.Decodable>",
+            "sugared_genericSig": "<E, D where E : Swift.Encodable, D : Swift.Decodable>",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:22HP2AuthorizationClient0a7ServiceC0C",
+        "mangledName": "$s22HP2AuthorizationClient0a7ServiceC0C",
+        "moduleName": "HP2AuthorizationClient",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "HP2AuthorizationClient",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HttpClientCertificateData",
+        "printedName": "HttpClientCertificateData",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(data:password:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HttpClientCertificateData",
+                "printedName": "HP2AuthorizationClient.HttpClientCertificateData",
+                "usr": "s:22HP2AuthorizationClient04HttpC15CertificateDataC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:22HP2AuthorizationClient04HttpC15CertificateDataC4data8passwordAC10Foundation0F0V_SStcfc",
+            "mangledName": "$s22HP2AuthorizationClient04HttpC15CertificateDataC4data8passwordAC10Foundation0F0V_SStcfc",
+            "moduleName": "HP2AuthorizationClient",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "urlCredential",
+            "printedName": "urlCredential()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URLCredential",
+                "printedName": "Foundation.URLCredential",
+                "usr": "c:objc(cs)NSURLCredential"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:22HP2AuthorizationClient04HttpC15CertificateDataC13urlCredentialSo15NSURLCredentialCyF",
+            "mangledName": "$s22HP2AuthorizationClient04HttpC15CertificateDataC13urlCredentialSo15NSURLCredentialCyF",
+            "moduleName": "HP2AuthorizationClient",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:22HP2AuthorizationClient04HttpC15CertificateDataC",
+        "mangledName": "$s22HP2AuthorizationClient04HttpC15CertificateDataC",
+        "moduleName": "HP2AuthorizationClient",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "HP2AuthorizationClient"
+      },
+      {
+        "kind": "Import",
+        "name": "Security",
+        "printedName": "Security",
+        "declKind": "Import",
+        "moduleName": "HP2AuthorizationClient"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Utils",
+        "printedName": "Utils",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "convertArray2HexStr",
+            "printedName": "convertArray2HexStr(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSData",
+                "printedName": "Foundation.NSData",
+                "usr": "c:objc(cs)NSData"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:22HP2AuthorizationClient5UtilsC19convertArray2HexStr4dataSSSo6NSDataC_tFZ",
+            "mangledName": "$s22HP2AuthorizationClient5UtilsC19convertArray2HexStr4dataSSSo6NSDataC_tFZ",
+            "moduleName": "HP2AuthorizationClient",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "convertArray2HexStr",
+            "printedName": "convertArray2HexStr(bytes:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.UInt8]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt8",
+                    "printedName": "Swift.UInt8",
+                    "usr": "s:s5UInt8V"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:22HP2AuthorizationClient5UtilsC19convertArray2HexStr5bytesSSSays5UInt8VG_tFZ",
+            "mangledName": "$s22HP2AuthorizationClient5UtilsC19convertArray2HexStr5bytesSSSays5UInt8VG_tFZ",
+            "moduleName": "HP2AuthorizationClient",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "secKeyCreateWithData",
+            "printedName": "secKeyCreateWithData(keyData:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SecKey",
+                "printedName": "Security.SecKey",
+                "usr": "c:@T@SecKeyRef"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSData",
+                "printedName": "Foundation.NSData",
+                "usr": "c:objc(cs)NSData"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:22HP2AuthorizationClient5UtilsC20secKeyCreateWithData03keyI0So03SecF3RefaSo6NSDataC_tKFZ",
+            "mangledName": "$s22HP2AuthorizationClient5UtilsC20secKeyCreateWithData03keyI0So03SecF3RefaSo6NSDataC_tKFZ",
+            "moduleName": "HP2AuthorizationClient",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:22HP2AuthorizationClient5UtilsC",
+        "mangledName": "$s22HP2AuthorizationClient5UtilsC",
+        "moduleName": "HP2AuthorizationClient",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "HP2AuthorizationClient"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TLVData",
+        "printedName": "TLVData",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawData:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TLVData",
+                "printedName": "HP2AuthorizationClient.TLVData",
+                "usr": "s:22HP2AuthorizationClient7TLVDataC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:22HP2AuthorizationClient7TLVDataC7rawDataAC10Foundation0F0VSg_tcfc",
+            "mangledName": "$s22HP2AuthorizationClient7TLVDataC7rawDataAC10Foundation0F0VSg_tcfc",
+            "moduleName": "HP2AuthorizationClient",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(data:startPos:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TLVData",
+                "printedName": "HP2AuthorizationClient.TLVData",
+                "usr": "s:22HP2AuthorizationClient7TLVDataC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:22HP2AuthorizationClient7TLVDataC4data8startPosAC10Foundation4DataVSg_Sitcfc",
+            "mangledName": "$s22HP2AuthorizationClient7TLVDataC4data8startPosAC10Foundation4DataVSg_Sitcfc",
+            "moduleName": "HP2AuthorizationClient",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(tag:len:value:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TLVData",
+                "printedName": "HP2AuthorizationClient.TLVData",
+                "usr": "s:22HP2AuthorizationClient7TLVDataC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:22HP2AuthorizationClient7TLVDataC3tag3len5valueAC10Foundation4DataV_A2Itcfc",
+            "mangledName": "$s22HP2AuthorizationClient7TLVDataC3tag3len5valueAC10Foundation4DataV_A2Itcfc",
+            "moduleName": "HP2AuthorizationClient",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(tag:value:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TLVData",
+                "printedName": "HP2AuthorizationClient.TLVData",
+                "usr": "s:22HP2AuthorizationClient7TLVDataC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:22HP2AuthorizationClient7TLVDataC3tag5valueAC10Foundation4DataV_AHtcfc",
+            "mangledName": "$s22HP2AuthorizationClient7TLVDataC3tag5valueAC10Foundation4DataV_AHtcfc",
+            "moduleName": "HP2AuthorizationClient",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawDataString:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TLVData",
+                "printedName": "HP2AuthorizationClient.TLVData",
+                "usr": "s:22HP2AuthorizationClient7TLVDataC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:22HP2AuthorizationClient7TLVDataC13rawDataStringACSS_tKcfc",
+            "mangledName": "$s22HP2AuthorizationClient7TLVDataC13rawDataStringACSS_tKcfc",
+            "moduleName": "HP2AuthorizationClient",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(tagToCopy:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TLVData",
+                "printedName": "HP2AuthorizationClient.TLVData",
+                "usr": "s:22HP2AuthorizationClient7TLVDataC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TLVData",
+                "printedName": "HP2AuthorizationClient.TLVData",
+                "usr": "s:22HP2AuthorizationClient7TLVDataC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:22HP2AuthorizationClient7TLVDataC9tagToCopyA2C_tcfc",
+            "mangledName": "$s22HP2AuthorizationClient7TLVDataC9tagToCopyA2C_tcfc",
+            "moduleName": "HP2AuthorizationClient",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Function",
+            "name": "getTag",
+            "printedName": "getTag()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:22HP2AuthorizationClient7TLVDataC6getTag10Foundation4DataVyF",
+            "mangledName": "$s22HP2AuthorizationClient7TLVDataC6getTag10Foundation4DataVyF",
+            "moduleName": "HP2AuthorizationClient",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getLen",
+            "printedName": "getLen()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:22HP2AuthorizationClient7TLVDataC6getLenSiyF",
+            "mangledName": "$s22HP2AuthorizationClient7TLVDataC6getLenSiyF",
+            "moduleName": "HP2AuthorizationClient",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getValue",
+            "printedName": "getValue()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:22HP2AuthorizationClient7TLVDataC8getValue10Foundation4DataVyF",
+            "mangledName": "$s22HP2AuthorizationClient7TLVDataC8getValue10Foundation4DataVyF",
+            "moduleName": "HP2AuthorizationClient",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getLenData",
+            "printedName": "getLenData()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:22HP2AuthorizationClient7TLVDataC10getLenData10Foundation0G0VyF",
+            "mangledName": "$s22HP2AuthorizationClient7TLVDataC10getLenData10Foundation0G0VyF",
+            "moduleName": "HP2AuthorizationClient",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getRawData",
+            "printedName": "getRawData()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:22HP2AuthorizationClient7TLVDataC10getRawData10Foundation0G0VyF",
+            "mangledName": "$s22HP2AuthorizationClient7TLVDataC10getRawData10Foundation0G0VyF",
+            "moduleName": "HP2AuthorizationClient",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getTotalLen",
+            "printedName": "getTotalLen()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:22HP2AuthorizationClient7TLVDataC11getTotalLenSiyF",
+            "mangledName": "$s22HP2AuthorizationClient7TLVDataC11getTotalLenSiyF",
+            "moduleName": "HP2AuthorizationClient",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getChildren",
+            "printedName": "getChildren()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[HP2AuthorizationClient.TLVData]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TLVData",
+                    "printedName": "HP2AuthorizationClient.TLVData",
+                    "usr": "s:22HP2AuthorizationClient7TLVDataC"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:22HP2AuthorizationClient7TLVDataC11getChildrenSayACGyF",
+            "mangledName": "$s22HP2AuthorizationClient7TLVDataC11getChildrenSayACGyF",
+            "moduleName": "HP2AuthorizationClient",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "findTag",
+            "printedName": "findTag(tagToFind:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "HP2AuthorizationClient.TLVData?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TLVData",
+                    "printedName": "HP2AuthorizationClient.TLVData",
+                    "usr": "s:22HP2AuthorizationClient7TLVDataC"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:22HP2AuthorizationClient7TLVDataC7findTag9tagToFindACSg10Foundation4DataV_tF",
+            "mangledName": "$s22HP2AuthorizationClient7TLVDataC7findTag9tagToFindACSg10Foundation4DataV_tF",
+            "moduleName": "HP2AuthorizationClient",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateFromChildren",
+            "printedName": "updateFromChildren()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:22HP2AuthorizationClient7TLVDataC18updateFromChildrenyyF",
+            "mangledName": "$s22HP2AuthorizationClient7TLVDataC18updateFromChildrenyyF",
+            "moduleName": "HP2AuthorizationClient",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:22HP2AuthorizationClient7TLVDataC",
+        "mangledName": "$s22HP2AuthorizationClient7TLVDataC",
+        "moduleName": "HP2AuthorizationClient",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "HP2AuthorizationClient",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "HP2AuthorizationClient",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "WebServiceException",
+        "printedName": "WebServiceException",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WebServiceException",
+                "printedName": "HP2AuthorizationClient.WebServiceException",
+                "usr": "s:22HP2AuthorizationClient19WebServiceExceptionV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:22HP2AuthorizationClient19WebServiceExceptionVACycfc",
+            "mangledName": "$s22HP2AuthorizationClient19WebServiceExceptionVACycfc",
+            "moduleName": "HP2AuthorizationClient",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WebServiceException",
+                "printedName": "HP2AuthorizationClient.WebServiceException",
+                "usr": "s:22HP2AuthorizationClient19WebServiceExceptionV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:22HP2AuthorizationClient19WebServiceExceptionVyACSScfc",
+            "mangledName": "$s22HP2AuthorizationClient19WebServiceExceptionVyACSScfc",
+            "moduleName": "HP2AuthorizationClient",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "getMessage",
+            "printedName": "getMessage()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:22HP2AuthorizationClient19WebServiceExceptionV10getMessageSSyF",
+            "mangledName": "$s22HP2AuthorizationClient19WebServiceExceptionV10getMessageSSyF",
+            "moduleName": "HP2AuthorizationClient",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:22HP2AuthorizationClient19WebServiceExceptionV",
+        "mangledName": "$s22HP2AuthorizationClient19WebServiceExceptionV",
+        "moduleName": "HP2AuthorizationClient",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "HP2AuthorizationClient",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Security",
+        "printedName": "Security",
+        "declKind": "Import",
+        "moduleName": "HP2AuthorizationClient"
+      },
+      {
+        "kind": "Import",
+        "name": "CommonCrypto",
+        "printedName": "CommonCrypto",
+        "declKind": "Import",
+        "moduleName": "HP2AuthorizationClient"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CertificateVerifier",
+        "printedName": "CertificateVerifier",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "verify",
+            "printedName": "verify(certificateP12:password:pubKeyData:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSData",
+                "printedName": "Foundation.NSData",
+                "usr": "c:objc(cs)NSData"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSData",
+                "printedName": "Foundation.NSData",
+                "usr": "c:objc(cs)NSData"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:22HP2AuthorizationClient19CertificateVerifierC6verify14certificateP128password10pubKeyDataySo6NSDataC_SSAItKFZ",
+            "mangledName": "$s22HP2AuthorizationClient19CertificateVerifierC6verify14certificateP128password10pubKeyDataySo6NSDataC_SSAItKFZ",
+            "moduleName": "HP2AuthorizationClient",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pemToDER",
+            "printedName": "pemToDER(certificatePEM:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSData",
+                "printedName": "Foundation.NSData",
+                "usr": "c:objc(cs)NSData"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSData",
+                "printedName": "Foundation.NSData",
+                "usr": "c:objc(cs)NSData"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:22HP2AuthorizationClient19CertificateVerifierC8pemToDER14certificatePEMSo6NSDataCAG_tKFZ",
+            "mangledName": "$s22HP2AuthorizationClient19CertificateVerifierC8pemToDER14certificatePEMSo6NSDataCAG_tKFZ",
+            "moduleName": "HP2AuthorizationClient",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:22HP2AuthorizationClient19CertificateVerifierC",
+        "mangledName": "$s22HP2AuthorizationClient19CertificateVerifierC",
+        "moduleName": "HP2AuthorizationClient",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 398,
+      "length": 35,
+      "value": "\"application\/x-www-form-urlencoded\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 477,
+      "length": 18,
+      "value": "\"application\/json\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 2871,
+      "length": 15,
+      "value": "\"secureacs.com\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 3017,
+      "length": 394,
+      "value": "\"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvkCd9G7h6naHHE1FRI6+RsiDBp3BKv4YH47kAvrzq11QihYxC5oG0MVwIs1JLVRjzLZuaEYLU+rLTCTAvHJO6vEVrvRUmhIKw3qyM2Di2olV8yJY897cz++DhqKMlE+faPKYkEaEJ8d2v+PMNSyLXgdkZYLASLCokflhn3YgUKiRx2a163hiA1bwihoT6jGjHqCZ\/Tj29icyWG8H9Wu4+xQrr7eqzNZjX3OM2gWZqDioyxd4NlGs6Z70eDqNzw\/ZQuKYDKsvnw4B3u+fmUnxLd+sdE0bmLVHxeUp0fmQGMdinL6DxyZ7Poolx8DdneY1aBAgnY\/Y3tLDhJwNXugvyQIDAQAB\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 3466,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 3514,
+      "length": 394,
+      "value": "\"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAllknJY2hWxGq9FSlsGHjXp\/XFkw2DHz0cU8ZK6AUxZS+1HDbsL90mGlN2q0SpGdNMmfvjI6nnDohxT36fnY42ZXYbElvzTu1F2ln+EYOuMza9lIC+LAkD5SLdtu1LR7+C2XJE5ge5H1k9x1yvsM1ts7jC2gc0ZklgsCkjp7N0oaN3amoqviQiFPVs3btsWuO3P9mI\/Voa3DqiJPxVPpDfJbolY5g3eUrggqF1B4pTmwedOucwvAHkyLq1tG2B2EqagG4hzEes1khVojeaA7OsdInyM9mFuUuJiOgAGRyTK1MhbDhFCxC4RGZFg+2CaAFl6bEyw09wA9W365zyuSIPwIDAQAB\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 3954,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 4002,
+      "length": 394,
+      "value": "\"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwR7kUIFJIKCMADTbkgCL3dBViowwvhwCW9AS9PJ35e4I13qBYoaBhhFEpDcvGXUCBLmwDFHd6v\/UqUg4ty4nX8KvoV\/hEJKHzVDgRAmUiG7Ze0uW3kMzjqqHgGjggw8tuSw7OA60rjaxEc+rV54GNJgv7Zlj5ffYCwfUW0iFopzdV0sGX\/7vh4au7fFh2KTc+2F5Frz8j3BHL8xzIrwbZpmTGKqV3ADDa6Eeiwf092lg13nCQVTVVmLsvVtSyG4OCo7+twdXRazN1nZqsw0sOjZ4bJMs4Bf\/i6FAfj38QNrzJc4\/0IB9maqs2L1agmSs3CQI8gbSMwSnNynXZMxo\/wIDAQAB\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 4442,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 4490,
+      "length": 394,
+      "value": "\"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwR7kUIFJIKCMADTbkgCL3dBViowwvhwCW9AS9PJ35e4I13qBYoaBhhFEpDcvGXUCBLmwDFHd6v\/UqUg4ty4nX8KvoV\/hEJKHzVDgRAmUiG7Ze0uW3kMzjqqHgGjggw8tuSw7OA60rjaxEc+rV54GNJgv7Zlj5ffYCwfUW0iFopzdV0sGX\/7vh4au7fFh2KTc+2F5Frz8j3BHL8xzIrwbZpmTGKqV3ADDa6Eeiwf092lg13nCQVTVVmLsvVtSyG4OCo7+twdXRazN1nZqsw0sOjZ4bJMs4Bf\/i6FAfj38QNrzJc4\/0IB9maqs2L1agmSs3CQI8gbSMwSnNynXZMxo\/wIDAQAB\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 4930,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 9727,
+      "length": 10,
+      "value": "\"https:\/\/\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 9788,
+      "length": 36,
+      "value": "\"Error: urlWebService must be https\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9941,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9983,
+      "length": 2,
+      "value": "30"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 10256,
+      "length": 14,
+      "value": "\"Content-Type\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 10316,
+      "length": 16,
+      "value": "\"Content-Length\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 10388,
+      "length": 8,
+      "value": "\"apiKey\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 10431,
+      "length": 15,
+      "value": "\"Authorization\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 10450,
+      "length": 9,
+      "value": "\"Bearer \""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 11139,
+      "length": 54,
+      "value": "\"Error executing WebService in URL [\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 11191,
+      "length": 1,
+      "value": "\"]\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 11234,
+      "length": 73,
+      "value": "\" - WebServiceException executing HTTP connection: [\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 11305,
+      "length": 1,
+      "value": "\"]\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 11402,
+      "length": 54,
+      "value": "\"Error executing WebService in URL [\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 11454,
+      "length": 1,
+      "value": "\"]\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 11497,
+      "length": 69,
+      "value": "\" - Exception executing HTTP connection: [\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 11564,
+      "length": 1,
+      "value": "\"]\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 11669,
+      "length": 31,
+      "value": "\"responseCode: \""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 11699,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 11908,
+      "length": 54,
+      "value": "\"Error executing WebService in URL [\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 11960,
+      "length": 1,
+      "value": "\"]\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 12003,
+      "length": 65,
+      "value": "\" - Http Code: [\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12044,
+      "length": 4,
+      "value": "-999"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 12050,
+      "length": 1,
+      "value": "\"] - Response: nil\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 12169,
+      "length": 75,
+      "value": "\"jsonResponseData \""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 12240,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 12243,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 12525,
+      "length": 3,
+      "value": "\"?\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 12580,
+      "length": 57,
+      "value": "\"Error executing WebService in URL [\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 12632,
+      "length": 1,
+      "value": "\"] - \""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 12678,
+      "length": 76,
+      "value": "\"Exception parsing JSON response: [\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 12731,
+      "length": 1,
+      "value": "\"] \""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 12753,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 13184,
+      "length": 10,
+      "value": "\"https:\/\/\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 13245,
+      "length": 36,
+      "value": "\"Error: urlWebService must be https\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13398,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13440,
+      "length": 2,
+      "value": "30"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 13754,
+      "length": 14,
+      "value": "\"Content-Type\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 13818,
+      "length": 16,
+      "value": "\"Content-Length\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 13890,
+      "length": 8,
+      "value": "\"apiKey\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 14578,
+      "length": 54,
+      "value": "\"Error executing WebService in URL [\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 14630,
+      "length": 1,
+      "value": "\"]\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 14673,
+      "length": 73,
+      "value": "\" - WebServiceException executing HTTP connection: [\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 14744,
+      "length": 1,
+      "value": "\"]\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 14841,
+      "length": 54,
+      "value": "\"Error executing WebService in URL [\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 14893,
+      "length": 1,
+      "value": "\"]\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 14936,
+      "length": 69,
+      "value": "\" - Exception executing HTTP connection: [\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 15003,
+      "length": 1,
+      "value": "\"]\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 15282,
+      "length": 54,
+      "value": "\"Error executing WebService in URL [\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 15334,
+      "length": 1,
+      "value": "\"]\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 15377,
+      "length": 65,
+      "value": "\" - Http Code: [\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "IntegerLiteral",
+      "offset": 15418,
+      "length": 4,
+      "value": "-999"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 15424,
+      "length": 1,
+      "value": "\"] - Response: nil\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 15790,
+      "length": 3,
+      "value": "\"?\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 15845,
+      "length": 57,
+      "value": "\"Error executing WebService in URL [\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 15897,
+      "length": 1,
+      "value": "\"] - \""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 15943,
+      "length": 76,
+      "value": "\"Exception parsing JSON response: [\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 15996,
+      "length": 1,
+      "value": "\"] \""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 16018,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "BooleanLiteral",
+      "offset": 17026,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "BooleanLiteral",
+      "offset": 17058,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "IntegerLiteral",
+      "offset": 19488,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 20099,
+      "length": 40,
+      "value": "\"Error connecting - httpResponse IS nil\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 20250,
+      "length": 49,
+      "value": "\"Error connecting - httpResponse.response IS nil\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 20340,
+      "length": 75,
+      "value": "\" - httpResponse.error: \""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 20411,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 20414,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "IntegerLiteral",
+      "offset": 20486,
+      "length": 3,
+      "value": "200"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 20539,
+      "length": 70,
+      "value": "\"Error ser - HttpError: \""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 20608,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 20644,
+      "length": 31,
+      "value": "\"httpResponse: \""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 20674,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "BooleanLiteral",
+      "offset": 20991,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "BooleanLiteral",
+      "offset": 21854,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "IntegerLiteral",
+      "offset": 21957,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "BooleanLiteral",
+      "offset": 22756,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 22953,
+      "length": 26,
+      "value": "\"Invalid root certificate\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "BooleanLiteral",
+      "offset": 24850,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "BooleanLiteral",
+      "offset": 25361,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "IntegerLiteral",
+      "offset": 25522,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "BooleanLiteral",
+      "offset": 26000,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 26255,
+      "length": 28,
+      "value": "\"Invalid client certificate\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "BooleanLiteral",
+      "offset": 26474,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "BooleanLiteral",
+      "offset": 26983,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "IntegerLiteral",
+      "offset": 27144,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "BooleanLiteral",
+      "offset": 27622,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/HP2ServiceClient.swift",
+      "kind": "StringLiteral",
+      "offset": 27877,
+      "length": 28,
+      "value": "\"Invalid client certificate\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/X509.swift",
+      "kind": "StringLiteral",
+      "offset": 431,
+      "length": 44,
+      "value": "\"unable to load certificate file \""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/X509.swift",
+      "kind": "StringLiteral",
+      "offset": 474,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/X509.swift",
+      "kind": "StringLiteral",
+      "offset": 609,
+      "length": 26,
+      "value": "\"unable to load publicKey\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/X509.swift",
+      "kind": "StringLiteral",
+      "offset": 865,
+      "length": 33,
+      "value": "\"unable to load certificate data\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/X509.swift",
+      "kind": "StringLiteral",
+      "offset": 1032,
+      "length": 26,
+      "value": "\"unable to load publicKey\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/X509.swift",
+      "kind": "StringLiteral",
+      "offset": 3904,
+      "length": 23,
+      "value": "\"unable to load pkcs12\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/X509.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3983,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/X509.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4077,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/X509.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4169,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/Utils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 475,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/Utils.swift",
+      "kind": "StringLiteral",
+      "offset": 745,
+      "length": 18,
+      "value": "\"0123456789ABCDEF\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/Utils.swift",
+      "kind": "StringLiteral",
+      "offset": 801,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/Utils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 954,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/Utils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1077,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/Utils.swift",
+      "kind": "StringLiteral",
+      "offset": 2077,
+      "length": 16,
+      "value": "\"iads8d7sdas83p\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/Utils.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2533,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/Utils.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3460,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 190,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2019,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2051,
+      "length": 4,
+      "value": "0x1F"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2060,
+      "length": 4,
+      "value": "0x1F"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2107,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2155,
+      "length": 4,
+      "value": "0x80"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2164,
+      "length": 4,
+      "value": "0x80"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2211,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2250,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2423,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2446,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2489,
+      "length": 4,
+      "value": "0xFF"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2498,
+      "length": 4,
+      "value": "0x80"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2505,
+      "length": 4,
+      "value": "0xFF"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2574,
+      "length": 4,
+      "value": "0x0F"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2631,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2672,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2726,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2731,
+      "length": 4,
+      "value": "0xFF"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2836,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2849,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3008,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3012,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "Array",
+      "offset": 3093,
+      "length": 6,
+      "value": "[0x00]"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3383,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3479,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3516,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3521,
+      "length": 4,
+      "value": "0xFF"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3547,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3911,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3916,
+      "length": 4,
+      "value": "0x20"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3925,
+      "length": 5,
+      "value": "0x020"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3978,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4207,
+      "length": 4,
+      "value": "0x00"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4239,
+      "length": 4,
+      "value": "0xFF"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4300,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5383,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5531,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5573,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5631,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5657,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5709,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5892,
+      "length": 4,
+      "value": "0x80"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6092,
+      "length": 4,
+      "value": "0x80"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6100,
+      "length": 4,
+      "value": "0x0F"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6330,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6334,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7210,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7215,
+      "length": 4,
+      "value": "0x20"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7224,
+      "length": 4,
+      "value": "0x20"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7820,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7934,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7981,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9075,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9080,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9206,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9239,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9250,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9292,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9418,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/TLVData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9475,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/WebServiceException.swift",
+      "kind": "StringLiteral",
+      "offset": 399,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 604,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 942,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1117,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1244,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1293,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1394,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1406,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1412,
+      "length": 4,
+      "value": "0x06"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1532,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "Array",
+      "offset": 1675,
+      "length": 54,
+      "value": "[0x2A, 0x86, 0x48, 0x86, 0xF7, 0x0D, 0x01, 0x01, 0x0B]"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "Array",
+      "offset": 1900,
+      "length": 54,
+      "value": "[0x2A, 0x86, 0x48, 0x86, 0xF7, 0x0D, 0x01, 0x01, 0x05]"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2257,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2294,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2300,
+      "length": 4,
+      "value": "0x03"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2511,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2703,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2942,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3124,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3486,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3492,
+      "length": 4,
+      "value": "0x00"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "StringLiteral",
+      "offset": 4086,
+      "length": 7,
+      "value": "\"-----\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4200,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4260,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "StringLiteral",
+      "offset": 4399,
+      "length": 7,
+      "value": "\"-----\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4514,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5018,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "StringLiteral",
+      "offset": 5107,
+      "length": 7,
+      "value": "\"-----\""
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5221,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5281,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5546,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5948,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6367,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6610,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/hst\/Documents\/repositories\/HP2AppleSDK\/source\/HP2AppleSDK\/HP2AuthorizationClient\/HP2AuthorizationClient\/support\/CertificateVerifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7025,
+      "length": 1,
+      "value": "0"
+    }
+  ]
+}
