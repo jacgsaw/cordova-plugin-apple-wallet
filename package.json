@@ -21,7 +21,9 @@
         "win32"
     ],
     "scripts": {},
-    "dependencies": {},
+    "dependencies": {
+        "glob": "^7.1.3"
+    },
     "devDependencies": {},
     "cordova": {
         "id": "cordova-plugin-apple-wallet",

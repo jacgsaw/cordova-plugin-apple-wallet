@@ -1,1 +1,5 @@
 .npmrc
+.idea
+
+AGENTS.md
+config-build.json.example
