@@ -208,28 +208,112 @@ El proyecto hoy tiene dos configuraciones distintas:
 - `.npmrc` apunta a `http://51.222.90.96:8081/repository/coe-plugin-apple-wallet/`
 - `publishConfig.registry` en `package.json` apunta a `http://51.222.90.96:8081/repository/apple-wallet/`
 
-Para `npm publish`, npm usa `publishConfig.registry`.
-
-### Comando minimo
-
-```bash
-npm publish
-```
-
-### Comando explicito
-
-```bash
-npm publish --registry http://51.222.90.96:8081/repository/apple-wallet/
-```
+Este esquema es valido si se quiere instalar dependencias desde el `group` `coe-plugin-apple-wallet` y publicar el plugin al repositorio `hosted` `apple-wallet`. Para `npm publish`, npm usa `publishConfig.registry`.
 
 ### Flujo recomendado de publicacion
 
 1. Actualizar version en `package.json`.
-2. Confirmar que `.npmrc` y `publishConfig.registry` apuntan al mismo repo si se desea consistencia.
-3. Ejecutar:
+2. Mantener el `group` como `registry` general para instalar y el `hosted` como destino de publicacion.
+3. Autenticarse por comando contra el registry de publicacion:
+
+```bash
+npm adduser --registry http://51.222.90.96:8081/repository/apple-wallet/
+```
+
+4. Si Nexus tambien exige autenticacion para consumir el `group`, autenticarse ademas contra ese endpoint:
+
+```bash
+npm adduser --registry http://51.222.90.96:8081/repository/coe/
+```
+
+5. Ejecutar:
 
 ```bash
 npm publish --registry http://51.222.90.96:8081/repository/apple-wallet/
+```
+
+### Configuracion recomendada de `.npmrc`
+
+El `.npmrc` versionado en el repo deberia contener solo configuracion no sensible:
+
+```ini
+registry=http://51.222.90.96:8081/repository/coe/
+always-auth=true
+```
+
+Las credenciales deben quedar en `~/.npmrc` del usuario que publica o instala, preferiblemente generadas por `npm adduser`.
+
+### Secuencia recomendada de validacion
+
+1. Validar el `registry` por defecto:
+```bash
+npm config get registry
+```
+Resultado esperado:
+```bash
+http://51.222.90.96:8081/repository/coe/
+```
+
+2. Validar el destino de publicacion del paquete:
+```bash
+npm pkg get publishConfig.registry
+```
+Resultado esperado:
+```bash
+"http://51.222.90.96:8081/repository/apple-wallet/"
+```
+
+3. Revisar configuracion efectiva y credenciales del usuario:
+```bash
+npm config list
+cat ~/.npmrc
+```
+Verificar que no exista otro `.npmrc` sobreescribiendo el `registry`, y que `~/.npmrc` tenga credenciales para `apple-wallet` y, si aplica, para `coe-plugin-apple-wallet`.
+
+4. Validar autenticacion contra el `group`:
+```bash
+npm whoami --registry http://51.222.90.96:8081/repository/coe-plugin-apple-wallet/
+```
+Si falla con `ENEEDAUTH`, aun no hay login valido para ese endpoint.
+
+5. Validar autenticacion contra el repo de publicacion:
+```bash
+npm whoami --registry http://51.222.90.96:8081/repository/apple-wallet/
+```
+Si falla con `ENEEDAUTH`, `npm publish` tambien fallara.
+
+6. Verificar la publicacion sin subir el paquete:
+```bash
+npm publish --dry-run
+```
+Esto no publica realmente. Si aparece un error de autenticacion contra `apple-wallet`, todavia falta login en ese registry.
+
+### Como dejar la configuracion por defecto
+
+Para dejar el `group` como registry general del usuario actual:
+
+```bash
+npm config set registry http://51.222.90.96:8081/repository/coe-plugin-apple-wallet/
+```
+
+Para dejar autenticacion siempre activa hacia ese registry:
+
+```bash
+npm config set always-auth true
+```
+
+Para publicar explicitamente al repo `hosted`:
+
+```bash
+npm publish --registry http://51.222.90.96:8081/repository/apple-wallet/
+```
+
+Para cambiar ese destino de forma persistente, actualizar `publishConfig.registry` en `package.json`:
+
+```json
+"publishConfig": {
+  "registry": "http://51.222.90.96:8081/repository/apple-wallet/"
+}
 ```
 
 ### Recomendacion de seguridad
