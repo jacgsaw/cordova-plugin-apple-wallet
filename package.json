@@ -21,7 +21,7 @@
         "win32"
     ],
     "scripts": {
-        "publish:nexus": "npm publish --registry http://51.222.90.96:8081/repository/apple-wallet/",
+        "publish:nexus": "npm publish --registry http://13.140.189.86:8081/repository/apple-wallet/",
         "publish:npm": "npm publish --registry https://registry.npmjs.org/ --access restricted"
     },
     "dependencies": {
@@ -35,6 +35,6 @@
         ]
     },
     "publishConfig": {
-        "registry": "http://51.222.90.96:8081/repository/apple-wallet/"
+        "registry": "http://13.140.189.86:8081/repository/apple-wallet/"
     }
 }

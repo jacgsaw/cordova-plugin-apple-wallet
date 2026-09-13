@@ -38,7 +38,7 @@ class ActionViewController: UIViewController, PKIssuerProvisioningExtensionAutho
         controller.view.frame = self.view.bounds
                 controller.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 
-                addChildViewController(controller)
+                addChild(controller)
                 view.addSubview(controller.view)
                 controller.didMove(toParent: self)
         }
@@ -47,7 +47,7 @@ class ActionViewController: UIViewController, PKIssuerProvisioningExtensionAutho
             setAnalyticsDev(code: "TAG-200", data: "setupLoadingIndicator")
             view.backgroundColor = .systemBackground
 
-            activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .large)
+            activityIndicator = UIActivityIndicatorView(style: .large)
             activityIndicator.color = .gray
             activityIndicator.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview(activityIndicator)
