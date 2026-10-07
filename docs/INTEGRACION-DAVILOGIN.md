@@ -50,7 +50,7 @@ Ambas extensiones comparten datos por Keychain usando el access group `group.com
 
 ### 1. Acceso a Nexus
 
-El paquete se publica como `@jacgsaw/cordova-plugin-apple-wallet` en el repositorio hosted `apple-wallet`. Agregar al `.npmrc` del proyecto hibrido solo el mapeo del scope, sin cambiar el registry general:
+El paquete se publica como `@jacgsaw/cordova-plugin-apple-wallet` en el repositorio hosted `apple-wallet`. Agregar al `.npmrc` de la **raiz** del monorepo (npm workspaces) solo el mapeo del scope, sin cambiar el registry general:
 
 ```ini
 @jacgsaw:registry=http://13.140.189.86:8081/repository/apple-wallet/
@@ -73,14 +73,35 @@ En Azure Pipelines (`azure-pipelines-ios.yml`) agregar, antes de `npm install`, 
 
 ### 2. Dependencia
 
-En `@app/mobile/ios/package.json`, reemplazar la dependencia sin scope:
+En `@app/mobile/ios/package.json`:
 
-```diff
-- "cordova-plugin-apple-wallet": "1.3.8"
-+ "@jacgsaw/cordova-plugin-apple-wallet": "1.3.9"
+```json
+"dependencies": {
+    "@jacgsaw/cordova-plugin-apple-wallet": "1.3.9"
+},
+"cordova": {
+    "plugins": {
+        "@jacgsaw/cordova-plugin-apple-wallet": {},
+        "cordova-plugin-apple-wallet": {}
+    }
+}
 ```
 
-El `id` de Cordova sigue siendo `cordova-plugin-apple-wallet` (definido en `plugin.xml`), por lo que `config.xml`, hooks y referencias JS (`HP2CordovaPlugin`) no cambian.
+Por que las dos claves en `cordova.plugins`:
+
+- Al restaurar plugins (`cordova platform add` / `prepare`), Cordova 12 busca la version en `dependencies` usando la clave de `cordova.plugins`. Si solo estuviera `cordova-plugin-apple-wallet` (el id del `plugin.xml`), no encontraria `@jacgsaw/...` y lo buscaria sin scope en npmjs.
+- Con la clave `@jacgsaw/...`, Cordova usa el paquete ya instalado por `npm install` (que si respeta el `.npmrc`).
+- Cordova agrega por su cuenta la clave `cordova-plugin-apple-wallet` despues de instalar; dejarla evita que modifique el `package.json` en cada build. Con ambas claves el plugin se instala una sola vez.
+
+No usar un alias npm (`"cordova-plugin-apple-wallet": "npm:@jacgsaw/..."`): `cordova-fetch` resuelve el alias sin leer el `.npmrc` y falla con `404 ... registry.npmjs.org/@jacgsaw%2fcordova-plugin-apple-wallet`.
+
+El `id` de Cordova sigue siendo `cordova-plugin-apple-wallet`, por lo que hooks y referencias JS (`HP2CordovaPlugin`) no cambian.
+
+Despues de editar, regenerar el lock desde la raiz del monorepo:
+
+```bash
+npm install --legacy-peer-deps
+```
 
 ### 3. Configuracion del host
 
