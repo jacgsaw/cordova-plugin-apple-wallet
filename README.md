@@ -8,7 +8,7 @@ Plugin Cordova para iOS que integra Apple Wallet usando `HP2AppleSDK`, `HP2Autho
 - Runtime JS expuesto: [www/HP2CordovaPlugin.js](/Users/JOACRUZ/Documents/Proyects/cordova-plugin-apple-wallet/www/HP2CordovaPlugin.js:1)
 - Implementacion nativa principal: [src/ios/HP2CordovaPlugin.swift](/Users/JOACRUZ/Documents/Proyects/cordova-plugin-apple-wallet/src/ios/HP2CordovaPlugin.swift:1)
 - Definicion del plugin y hooks: [plugin.xml](/Users/JOACRUZ/Documents/Proyects/cordova-plugin-apple-wallet/plugin.xml:1)
-- Version actual del paquete: `1.3.7`
+- Version actual del paquete: `1.3.9`
 
 ## Que hace el plugin
 

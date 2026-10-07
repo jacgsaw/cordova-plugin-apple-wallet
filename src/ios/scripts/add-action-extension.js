@@ -378,7 +378,13 @@ module.exports = function (context) {
         buildConfig.buildSettings.INFOPLIST_FILE = `Extensions/${extension.name}/Info.plist`
         buildConfig.buildSettings.INFOPLIST_KEY_CFBundleDisplayName = extension.name
         buildConfig.buildSettings.CURRENT_PROJECT_VERSION = 1
-        buildConfig.buildSettings.IPHONEOS_DEPLOYMENT_TARGET = `14.0`
+        // DaviLogin (SwiftUI) requires iOS 15, same as the host app
+        buildConfig.buildSettings.IPHONEOS_DEPLOYMENT_TARGET = `15.0`
+
+        // The host project is compiled with Swift 4 (SwiftVersion preference); DaviLogin needs Swift 5
+        if (extension.name === "AuthenticationExtension") {
+          buildConfig.buildSettings.SWIFT_VERSION = `5.0`
+        }
 
         logger.append(
           `extensionName: ${extension.name}
@@ -430,25 +436,50 @@ module.exports = function (context) {
     }
 
     fs.readdirSync(src).forEach((item) => {
+      if (item === ".DS_Store") return
+
       const srcItem = path.join(src, item)
       const destiny = path.join(dest, item)
+      // Every file is referenced from the extension group, so the path is always relative to
+      // platforms/ios no matter how deep the file is (e.g. DaviLogin/Core/System/*.swift)
+      const destItem = path.join(cumulative, path.relative(iosPath, destiny))
 
       if (fs.lstatSync(srcItem).isDirectory()) {
-        let cumulativeOut = path.join(cumulative, "..")
-        dest = copyDirectorySyncExtension(srcItem, destiny, extension, cumulativeOut)
+        if (item.endsWith(".xcassets")) {
+          // Asset catalogs are added as a single resource, not file by file
+          copyDirectorySync(srcItem, destiny)
+          addExtensionResource(destItem, extension)
+        } else {
+          copyDirectorySyncExtension(srcItem, destiny, extension, cumulative)
+        }
       } else {
         fs.copyFileSync(srcItem, destiny)
-        const destItemRelative = path.relative(iosPath, destiny)
-        const destItem = path.join(cumulative, destItemRelative)
 
-        // .plist should be added only in target and project
-        if (!destiny.includes(".plist") && !destiny.includes("Action.js")) {
+        if (item.endsWith(".ttf") || item.endsWith(".otf")) {
+          addExtensionResource(destItem, extension, { lastKnownFileType: "file" })
+        } else if (!destiny.includes(".plist") && !destiny.includes("Action.js")) {
           project.addSourceFile(destItem, { target: extension.target.uuid }, extension.groupKey)
         } else {
+          // .plist should be added only in target and project
           justAddSourceFile(destItem, { target: extension.target.uuid }, extension.groupKey)
         }
       }
     })
+  }
+
+  // Adds a file to the extension group and to the Resources build phase of the extension target
+  function addExtensionResource(filePath, extension, opt) {
+    const file = project.addFile(filePath, extension.groupKey, opt || {})
+
+    if (!file) return false
+
+    file.uuid = project.generateUuid()
+    file.target = extension.target.uuid
+
+    project.addToPbxBuildFileSection(file) // PBXBuildFile
+    project.addToPbxResourcesBuildPhase(file) // PBXResourcesBuildPhase
+
+    return file
   }
 
   // Function to copy folder recursevely

@@ -5,7 +5,7 @@ import UIKit
 class ActionViewController: UIViewController, PKIssuerProvisioningExtensionAuthorizationProviding {
     var completionHandler: ((PKIssuerProvisioningExtensionAuthorizationResult) -> Void)?
     var activityIndicator: UIActivityIndicatorView!
-    var hostingController: UIHostingController<LoginActivity>?
+    var hostingController: UIHostingController<AnyView>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,10 +30,8 @@ class ActionViewController: UIViewController, PKIssuerProvisioningExtensionAutho
             self.dismiss(animated: true)
             self.completionHandler?(.authorized)
         }
-        let controller = UIHostingController(rootView: loginView)
+        let controller = UIHostingController(rootView: AnyView(loginView.environmentObject(PagesViewModel())))
         self.hostingController = controller
-
-        print("jwt success \(String(describing: hostingController?.rootView.onLoginSuccess))")
 
         controller.view.frame = self.view.bounds
                 controller.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
