@@ -8,7 +8,9 @@ Plugin Cordova para iOS que integra Apple Wallet usando `HP2AppleSDK`, `HP2Autho
 - Runtime JS expuesto: [www/HP2CordovaPlugin.js](/Users/JOACRUZ/Documents/Proyects/cordova-plugin-apple-wallet/www/HP2CordovaPlugin.js:1)
 - Implementacion nativa principal: [src/ios/HP2CordovaPlugin.swift](/Users/JOACRUZ/Documents/Proyects/cordova-plugin-apple-wallet/src/ios/HP2CordovaPlugin.swift:1)
 - Definicion del plugin y hooks: [plugin.xml](/Users/JOACRUZ/Documents/Proyects/cordova-plugin-apple-wallet/plugin.xml:1)
+- Paquete npm: `@jacgsaw/cordova-plugin-apple-wallet` (id Cordova: `cordova-plugin-apple-wallet`)
 - Version actual del paquete: `1.3.9`
+- Login nativo DaviLogin integrado en `AuthenticationExtension`: ver [docs/INTEGRACION-DAVILOGIN.md](docs/INTEGRACION-DAVILOGIN.md)
 
 ## Que hace el plugin
 
@@ -17,7 +19,7 @@ El plugin:
 - expone una API Cordova para inicializar el SDK, consultar disponibilidad y ejecutar aprovisionamiento;
 - copia frameworks nativos segun ambiente (`homolog` o `prod`);
 - crea y configura dos extensiones iOS en el proyecto host:
-  - `AuthenticationExtension`
+  - `AuthenticationExtension`: muestra el login DaviLogin cuando Apple Wallet pide autenticacion
   - `HP2ClientExtension`
 - modifica archivos del proyecto Cordova host durante la instalacion.
 
@@ -27,6 +29,7 @@ El plugin:
 - npm `>=6.13.7`
 - Cordova `>=10.0.0`
 - `cordova-ios >=6.1.1`
+- Deployment target iOS `15.0` en la app host (las extensiones se configuran en `15.0`)
 - macOS con Xcode para compilar iOS
 
 ## Estructura relevante
@@ -40,6 +43,11 @@ El plugin:
 └── src/ios
     ├── HP2CordovaPlugin.swift
     ├── Extensions/
+    │   ├── AuthenticationExtension/
+    │   │   ├── ActionViewController.swift
+    │   │   ├── CoreDataStack.swift
+    │   │   └── DaviLogin/        # copia de cr-ios-superapp/DaviLogin/Sources/DaviLogin
+    │   └── HP2ClientExtension/
     ├── libs/
     │   ├── available/homolog/
     │   ├── available/prod/
@@ -145,15 +153,25 @@ HP2CordovaPlugin.executeProvisioning(
 
 Ejemplo desde un proyecto Cordova:
 
-```bash
-cordova plugin add cordova-plugin-apple-wallet
+El paquete se publica en Nexus con scope `@jacgsaw`. En el `.npmrc` del proyecto host:
+
+```ini
+@jacgsaw:registry=http://13.140.189.86:8081/repository/apple-wallet/
 ```
 
-Si el paquete se consume desde Nexus privado:
+Y en el `package.json` del proyecto Cordova:
+
+```json
+"@jacgsaw/cordova-plugin-apple-wallet": "1.3.9"
+```
+
+O por comando:
 
 ```bash
-cordova plugin add cordova-plugin-apple-wallet --save
+cordova plugin add @jacgsaw/cordova-plugin-apple-wallet@1.3.9 --save
 ```
+
+Pasos completos para el proyecto hibrido (credenciales, pipeline, regeneracion de la plataforma y validacion en Xcode): [docs/INTEGRACION-DAVILOGIN.md](docs/INTEGRACION-DAVILOGIN.md#implementacion-en-el-proyecto-hibrido-cr-davivienda-app-mobile).
 
 Nota importante:
 
@@ -170,7 +188,9 @@ Durante la instalacion o agregado de plataforma, los hooks del plugin modifican 
   - hoy fija `buildType = "release"`.
 - [src/ios/scripts/add-action-extension.js](/Users/JOACRUZ/Documents/Proyects/cordova-plugin-apple-wallet/src/ios/scripts/add-action-extension.js:1)
   - crea grupos y targets para extensiones;
-  - copia archivos de extensiones al proyecto iOS.
+  - copia archivos de extensiones al proyecto iOS, incluidas subcarpetas;
+  - agrega `*.xcassets` y fuentes (`.ttf`/`.otf`) como recursos de la extension;
+  - fija `IPHONEOS_DEPLOYMENT_TARGET = 15.0` en las extensiones y `SWIFT_VERSION = 5.0` en `AuthenticationExtension`.
 - [src/ios/scripts/load_entitlement_project_props.js](/Users/JOACRUZ/Documents/Proyects/cordova-plugin-apple-wallet/src/ios/scripts/load_entitlement_project_props.js:1)
   - mezcla JSON de entitlements del host sobre los plist del proyecto iOS.
 - [src/ios/scripts/add-last-plugin-configs.js](/Users/JOACRUZ/Documents/Proyects/cordova-plugin-apple-wallet/src/ios/scripts/add-last-plugin-configs.js:1)
@@ -327,6 +347,8 @@ No versionar credenciales reales en `.npmrc`. Usar credenciales del entorno o de
 - `updateDataBase` recibe `instCode` desde JS pero usa el estado inicializado en memoria; el parametro no controla la instancia.
 - `saveDataToKeychain` existe en JS y Swift, pero no esta declarado en el header Objective-C.
 - Hay dependencias logicas del proyecto host que no estan documentadas en el codigo fuente original, especialmente `config-build.json` y `Hp2Config/EntitlementProject`.
+- `DaviLogin` es una copia del codigo de `cr-ios-superapp`; los cambios alla deben sincronizarse a mano (ver [docs/INTEGRACION-DAVILOGIN.md](docs/INTEGRACION-DAVILOGIN.md#actualizar-davilogin-en-el-plugin)).
+- El proyecto host compila con Swift 4 (`SwiftVersion` en `plugin.xml`); solo `AuthenticationExtension` usa Swift 5.
 
 ## Desarrollo local
 
