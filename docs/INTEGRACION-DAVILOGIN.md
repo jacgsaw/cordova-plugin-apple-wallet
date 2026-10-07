@@ -27,6 +27,7 @@ Ambas extensiones comparten datos por Keychain usando el access group `group.com
 |---|---|
 | `src/ios/Extensions/AuthenticationExtension/DaviLogin/` | Copia de `cr-ios-superapp/DaviLogin/Sources/DaviLogin` (sin storyboard ni `.DS_Store`). |
 | `DaviLogin/Resources/Fonts/` | Solo las fuentes usadas por el codigo: `Roboto-Bold`, `Roboto-Medium`, `Roboto-Regular`. |
+| `AuthenticationExtension/Images.xcassets` | Las 28 imagenes (`icon-*`, `image-*`) que usa DaviLogin con `Image("...")`, tomadas de `cr-ios-superapp/Davivienda/Assets.xcassets`. En el superapp viven en el catalogo de la app, no dentro de DaviLogin. Agregado en `1.3.10`. |
 | `AuthenticationExtension/CoreDataStack.swift` | Copia del `CoreDataStack` de `cordova-plugin-davitools`. Ese plugin solo lo agrega al target de la app, y la extension lo necesita para el Keychain. |
 | `AuthenticationExtension/ActionViewController.swift` | Muestra `LoginActivity` inyectando `PagesViewModel` como `environmentObject` (requerido por `LoginActivity`). Usa APIs de Swift 5 (`addChild`, `UIActivityIndicatorView(style:)`). |
 | `AuthenticationExtension/Info.plist` | Agrega `UIAppFonts` con las tres fuentes Roboto. |
@@ -79,7 +80,7 @@ En `@app/mobile/ios/package.json`:
 
 ```json
 "dependencies": {
-    "@jacgsaw/cordova-plugin-apple-wallet": "1.3.9"
+    "@jacgsaw/cordova-plugin-apple-wallet": "1.3.10"
 },
 "cordova": {
     "plugins": {
@@ -129,7 +130,7 @@ Abrir `platforms/ios/Davivienda Costa Rica.xcworkspace` y revisar:
 
 - [ ] El target `AuthenticationExtension` existe y tiene `Swift Language Version = Swift 5` e `iOS Deployment Target = 15.0`.
 - [ ] Grupo `Extensions/AuthenticationExtension/DaviLogin/...` con todas las fuentes Swift en *Compile Sources* del target.
-- [ ] `Colors.xcassets` y las tres `Roboto-*.ttf` en *Copy Bundle Resources* de `AuthenticationExtension`.
+- [ ] `Colors.xcassets`, `Images.xcassets` y las tres `Roboto-*.ttf` en *Copy Bundle Resources* de `AuthenticationExtension`.
 - [ ] `CODE_SIGN_ENTITLEMENTS` de la extension apunta a `ExtensionEntitlements/AuthenticationExtension.entitlements`.
 - [ ] Compila para *Any iOS Device (arm64)*.
 - [ ] En un dispositivo: Wallet > agregar tarjeta > Davivienda abre el login, autentica y continua el aprovisionamiento.
@@ -153,6 +154,43 @@ done
 ```
 
 Si DaviLogin empieza a usar otra fuente, copiarla tambien y agregarla a `UIAppFonts` en `AuthenticationExtension/Info.plist`.
+
+### Imagenes
+
+Las imagenes no estan dentro de `DaviLogin/Sources`: estan en el catalogo de la app superapp (`Davivienda/Assets.xcassets`; el `Assets.xcassets` de la raiz es una copia incompleta, no usarlo). Por eso el plugin tiene su propio `AuthenticationExtension/Images.xcassets`, fuera de la carpeta `DaviLogin` para que el `rsync --delete` anterior no lo borre.
+
+Para regenerarlo con las imagenes que el codigo usa hoy:
+
+```bash
+SUPERAPP=/ruta/a/cr-ios-superapp
+SRC=$SUPERAPP/Davivienda/Assets.xcassets
+DST=src/ios/Extensions/AuthenticationExtension/Images.xcassets
+
+grep -rhoE '"(icon|image)-[A-Za-z0-9_-]+"' $SUPERAPP/DaviLogin/Sources/DaviLogin \
+  | tr -d '"' | sort -u > /tmp/davilogin-images.txt
+
+rm -rf "$DST"; mkdir -p "$DST"; cp "$SRC/Contents.json" "$DST/"
+while read n; do
+  rel=$(cd "$SRC" && find . -type d -name "$n.imageset" | head -1 | sed 's|^\./||')
+  [ -z "$rel" ] && { echo "FALTA: $n"; continue; }
+  mkdir -p "$DST/$rel"; rsync -a --exclude .DS_Store "$SRC/$rel/" "$DST/$rel/"
+  p=$(dirname "$rel")
+  while [ "$p" != "." ]; do cp "$SRC/$p/Contents.json" "$DST/$p/" 2>/dev/null; p=$(dirname "$p"); done
+done < /tmp/davilogin-images.txt
+```
+
+Si aparece `FALTA: <nombre>`, la imagen no existe en el catalogo del superapp y se vera vacia en la extension.
+
+Validar que el catalogo compila y contiene todas las imagenes:
+
+```bash
+mkdir -p /tmp/car && xcrun actool "$DST" --compile /tmp/car --platform iphoneos \
+  --minimum-deployment-target 15.0 --output-format human-readable-text
+xcrun assetutil --info /tmp/car/Assets.car | grep '"Name"' | sed -E 's/.*: "(.*)".*/\1/' | sort -u \
+  | comm -23 /tmp/davilogin-images.txt -     # no debe imprimir nada
+```
+
+Ojo: el `grep` solo detecta nombres escritos literalmente. Si se agrega una imagen cuyo nombre se arma en tiempo de ejecucion, agregarla a mano a la lista.
 
 Verificacion rapida de compilacion de la extension sin generar el proyecto Cordova:
 
@@ -195,4 +233,5 @@ Reglas para el codigo que se copia a la extension:
 | `'background(_:ignoresSafeAreaEdges:)' is only available in iOS 15.0` | Deployment target 14.0 | El hook fija 15.0 desde 1.3.9; regenerar la plataforma. |
 | Warning `no rule to process file ... .ttf` | Fuentes agregadas a *Sources* | El hook las agrega a *Resources* desde 1.3.9; regenerar la plataforma. |
 | Crash al abrir el login: `No ObservableObject of type PagesViewModel found` | Falta el `environmentObject` | `ActionViewController` lo inyecta desde 1.3.9. |
+| Iconos, logo o fondos del login aparecen vacios | Las imagenes no estan en el bundle de la extension | Desde `1.3.10` van en `Images.xcassets`; verificar que este en *Copy Bundle Resources* de `AuthenticationExtension`. |
 | Cambios del hook no se reflejan | Los hooks solo corren al agregar plugin/plataforma | `npm run ios:add`. |

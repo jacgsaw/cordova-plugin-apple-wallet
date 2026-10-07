@@ -9,7 +9,7 @@ Plugin Cordova para iOS que integra Apple Wallet usando `HP2AppleSDK`, `HP2Autho
 - Implementacion nativa principal: [src/ios/HP2CordovaPlugin.swift](/Users/JOACRUZ/Documents/Proyects/cordova-plugin-apple-wallet/src/ios/HP2CordovaPlugin.swift:1)
 - Definicion del plugin y hooks: [plugin.xml](/Users/JOACRUZ/Documents/Proyects/cordova-plugin-apple-wallet/plugin.xml:1)
 - Paquete npm: `@jacgsaw/cordova-plugin-apple-wallet` (id Cordova: `cordova-plugin-apple-wallet`)
-- Version actual del paquete: `1.3.9`
+- Version actual del paquete: `1.3.10`
 - Login nativo DaviLogin integrado en `AuthenticationExtension`: ver [docs/INTEGRACION-DAVILOGIN.md](docs/INTEGRACION-DAVILOGIN.md)
 
 ## Que hace el plugin
@@ -162,13 +162,13 @@ El paquete se publica en Nexus con scope `@jacgsaw`. En el `.npmrc` del proyecto
 Y en el `package.json` del proyecto Cordova:
 
 ```json
-"@jacgsaw/cordova-plugin-apple-wallet": "1.3.9"
+"@jacgsaw/cordova-plugin-apple-wallet": "1.3.10"
 ```
 
 O por comando:
 
 ```bash
-cordova plugin add @jacgsaw/cordova-plugin-apple-wallet@1.3.9 --save
+cordova plugin add @jacgsaw/cordova-plugin-apple-wallet@1.3.10 --save
 ```
 
 Pasos completos para el proyecto hibrido (credenciales, pipeline, regeneracion de la plataforma y validacion en Xcode): [docs/INTEGRACION-DAVILOGIN.md](docs/INTEGRACION-DAVILOGIN.md#implementacion-en-el-proyecto-hibrido-cr-davivienda-app-mobile).

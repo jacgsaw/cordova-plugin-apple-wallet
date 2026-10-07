@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "icon-logo-splashScreen.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

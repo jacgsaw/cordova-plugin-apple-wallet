@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "icon-logo-davivienda-white.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
