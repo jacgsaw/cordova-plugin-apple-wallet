@@ -59,9 +59,11 @@ El paquete se publica como `@jacgsaw/cordova-plugin-apple-wallet` en el reposito
 Las credenciales van en el `~/.npmrc` del usuario, nunca en el repo:
 
 ```bash
-npm login --registry http://13.140.189.86:8081/repository/apple-wallet/
+npm login --auth-type=legacy --registry http://13.140.189.86:8081/repository/apple-wallet/
 npm whoami --registry http://13.140.189.86:8081/repository/apple-wallet/
 ```
+
+Creacion de usuarios, roles, cambio de usuario y problemas de autenticacion: ver [NEXUS-AUTENTICACION.md](NEXUS-AUTENTICACION.md).
 
 En Azure Pipelines (`azure-pipelines-ios.yml`) agregar, antes de `npm install`, un paso que escriba el token desde una variable secreta (por ejemplo `NEXUS_NPM_TOKEN` en el variable group `IOS_CR`):
 
