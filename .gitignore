@@ -2,4 +2,5 @@
 .idea
 
 AGENTS.md
-config-build.json.example*.tgz
+config-build.json.example
+*.tgz
